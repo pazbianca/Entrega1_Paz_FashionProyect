@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+    {% if icons %}
+        <ol>
+        {% for icon in icons %}
+            <li>Name: {{icon.name}}</li>
+            <li>Age: {{icon.age}}</li>
+            <li>Date of Birth: {{icon.dateOfBirth}}</li>
+            <li>Profession: {{icon.profession}}</li>   
+            <li>Description: {{icon.description}}</li>
+        {% endfor %}
+        </ol>
+    {% endif %}
+{% endblock %}

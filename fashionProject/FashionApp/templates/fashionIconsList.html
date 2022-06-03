@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+{%  load static %}
+
+{% block contenido %}
+<div class="card" style="width: 18rem;">
+    {% for icon in data%}
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{icon.name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Name: {{icon.name}}</li>
+      <li class="list-group-item">Age: {{icon.age}}</li>
+      <li class="list-group-item">Date of birth: {{icon.dateOfBirth}}</li>
+      <li class="list-group-item">Profession: {{icon.profession}}</li>
+    </ul>
+    <div class="card-body">
+        <p class="card-text">{{icon.description}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

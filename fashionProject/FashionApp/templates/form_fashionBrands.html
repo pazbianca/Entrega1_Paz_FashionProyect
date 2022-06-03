@@ -1,0 +1,21 @@
+{% extends 'padre.html' %}
+{%  load static %}
+
+{% block contenido %}
+<form action="form_fashionBrands" method="POST">
+  {% csrf_token %}
+  <h1>FASHION BRANDS</h1>
+  <p>Name</p>
+  <input type="text" class="form-control" name = 'name' required>
+  <p>Founder</p>
+  <input type="text" class="form-control" name = 'founder' required>
+  <p>Date of foundation</p>
+  <input type="date" class="form-control" name = 'foundedDate' required>
+  <p>Headquarters</p>
+  <input type="text" class="form-control" name = 'headquarters' required>
+  <p>Description</p>
+  <input type="text" class="form-control" name = 'description' required>
+
+  <input type="submit" class="btn btn-primary" value='Send'> 
+</form>
+{% endblock %}

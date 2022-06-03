@@ -1,0 +1,23 @@
+{% extends 'padre.html' %}
+{%  load static %}
+
+{% block contenido %}
+<form action="form_fashionShows" method="POST">
+  {% csrf_token %}
+  <h1>FASHION SHOWS</h1>
+  <p>Name</p>
+  <input type="text" class="form-control" name = 'name' required>
+  <p>Brand</p>
+  <input type="text" class="form-control" name = 'brand' required>
+  <p>Date</p>
+  <input type="date" class="form-control" name = 'date' required>
+  <p>Fashion Capital</p>
+  <input type="text" class="form-control" name = 'fashionCapital' required>
+  <p>Collection Presented</p>
+  <input type="text" class="form-control" name = 'collectionPresented' required>
+  <p>Description</p>
+  <input type="text" class="form-control" name = 'description' required>
+
+  <input type="submit" class="btn btn-primary" value='Send'> 
+</form>
+{% endblock %}

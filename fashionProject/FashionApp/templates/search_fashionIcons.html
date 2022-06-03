@@ -1,0 +1,16 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+    <h1>SEARCH FOR A FASHION ICON</h1>
+    <form action="searchResults_fashionIcons" method="GET">
+        <p>Name</p>
+        <input type="text" name="name" id="name">
+        
+        <input type="submit" value="Search">
+
+    </form>
+
+{% endblock %}

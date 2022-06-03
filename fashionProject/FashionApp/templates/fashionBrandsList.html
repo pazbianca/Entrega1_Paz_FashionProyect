@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+{%  load static %}
+
+{% block contenido %}
+<div class="card" style="width: 18rem;">
+    {% for brand in data%}
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{brand.name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Name: {{brand.name}}</li>
+      <li class="list-group-item">Founder: {{brand.founder}}</li>
+      <li class="list-group-item">Date of foundation: {{brand.dateOfFoundation}}</li>
+      <li class="list-group-item">Headquarters: {{brand.headquarters}}</li>
+    </ul>
+    <div class="card-body">
+        <p class="card-text">{{brand.description}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
